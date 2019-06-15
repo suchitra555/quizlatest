@@ -18,7 +18,8 @@ from datetime import datetime
 #conn.execute('CREATE TABLE Earthquake (time text,latitude real,longitude real,depth real,mag real,magType text,nst real,gap real,dmin real,rms real,net text,id text,updated text,place text,type text,horizontalError real,depthError real,magError real,magNst real,status text,locationSource text,magSource text)')
 # print("Table created successfully")
 # conn.close()
-port = int(os.getenv("VCAP_APP_PORT"))
+#port = int(os.getenv("VCAP_APP_PORT"))
+port = int(os.getenv("VCAP_APP_PORT",'5000'))
 
 @app.route('/')
 def home():
