@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+   <body>
+
+   <center>
+      <header> <h1> This page lists the Earthquake Details </h1>
+          <br><h1>ID -: 1001666051</h1><br>
+          <h1>Name -: suchitra</h1><br>
+          <h1>Count:- {{data1}}</h1>
+      </header>
+      <br> <br>
+      <table border=1>
+    <thead>
+    <tr>
+        <td>Latitude</td>
+        <td>Longitude</td>
+        <td>Place Name</td>
+        <td>Mag Value</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in data2 %}
+    <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+      <br>
+      <h2> <a href = "/">Home</a> </h2>
+   </body>
+</html>
